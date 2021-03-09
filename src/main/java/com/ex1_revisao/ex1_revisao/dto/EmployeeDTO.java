@@ -1,5 +1,7 @@
 package com.ex1_revisao.ex1_revisao.dto;
 
+import com.ex1_revisao.ex1_revisao.entities.Employee;
+
 public class EmployeeDTO {
    private Long id;
    private String name;
@@ -15,7 +17,13 @@ public class EmployeeDTO {
        this.job = job;
    }
 
-   public Long getId() {
+   
+    public EmployeeDTO(Employee em) {
+        this.id = em.getId();
+        this.name = em.getName();
+    }
+
+public Long getId() {
        return id;
    }
 
