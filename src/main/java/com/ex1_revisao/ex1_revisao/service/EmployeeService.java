@@ -60,7 +60,7 @@ public class EmployeeService {
             repository.deleteById(id);
         }
         catch(EmptyResultDataAccessException e){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found");
         }
     }
 
@@ -73,7 +73,7 @@ public class EmployeeService {
             return new EmployeeDTO(entity);
         }
         catch(EmptyResultDataAccessException e){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found");
         }
     }
 }

@@ -17,13 +17,13 @@ public class EmployeeDTO {
        this.job = job;
    }
 
-   
     public EmployeeDTO(Employee em) {
         this.id = em.getId();
         this.name = em.getName();
+        this.job = em.getJob();
     }
 
-public Long getId() {
+    public Long getId() {
        return id;
    }
 
@@ -47,5 +47,4 @@ public Long getId() {
        this.job = job;
    }
 
-   
 }
